@@ -6,10 +6,10 @@ if (process.env.JAWSDB_URL) {
 } else {
 	connection = mysql.createConnection({
 		port: 3306,
-		host: "localhost",
-		user: "root",
-		password: "123abc123",
-		database: "burgers_db"
+		host:'tuy8t6uuvh43khkk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+		user:'lz6tlpqev73sxre6',
+		password:'fepinnzhfwfbgukr',
+		database:'x8g0whv390y27sak'
 	});
 };
 
