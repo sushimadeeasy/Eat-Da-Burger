@@ -1,6 +1,6 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE x8g0whv390y27sak;
 
-USE burgers_db;
+USE x8g0whv390y27sak;
 
 CREATE TABLE burgers (
 	id INTEGER(10) null,
