@@ -1,9 +1,15 @@
-CREATE DATABASE x8g0whv390y27sak;
+### Schema
 
-USE x8g0whv390y27sak;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
-CREATE TABLE burgers (
-	id INTEGER(10) null,
-    burger_name VARCHAR(10) null,
-    devoured boolean not null default 0
-)
+CREATE TABLE burgers
+(
+	id int NOT NULL AUTO_INCREMENT,
+	burger_name varchar(255) NOT NULL,
+	devoured BOOLEAN DEFAULT false,
+	ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  	dt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
+);
+ 

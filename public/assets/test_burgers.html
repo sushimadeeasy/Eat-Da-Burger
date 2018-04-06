@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<title>Burger Muncher</title>
+	
+	<!-- Bootstrap CSS & JS -->
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
+	<!-- JQuery  -->
+	<script src='https://code.jquery.com/jquery.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
+
+	<link href='css/burger_style.css' rel='stylesheet'>
+	<link href='img/favicon.png' rel='shortcut icon' type='image/png' >
+	<link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Roboto' rel='stylesheet'>
+</head>
+	<body>
+
+		<div class='container'>
+			<h1 class='header'><span class="glyphicon glyphicon-btc" aria-hidden="true"></span>URGER MUNCHERS 24/7 </h1>
+		</div>
+		<div class='container'>
+			<div class="carousel slide" data-ride="carousel" id='carouselImage'>
+			<!-- Indicators -->
+				<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+					<img src="img/burgerA.jpg" alt="...">
+					</div>
+					<div class="item">
+					<img src="img/burgerB.jpg" alt="...">
+					</div>
+					<div class="item">
+					<img src="img/burgerC.jpg" alt="...">
+					</div>
+					<div class="item">
+					<img src="img/burgerD.jpg" alt="...">
+					</div>
+					<div class="item">
+					<img src="img/burgerE.jpg" alt="...">
+					</div>
+				</div> 		
+			</div> <!-- carousel -->
+		</div> <!-- container -->
+
+		<div class='container'>
+			<p class='welcome'>Welcome to Burger Munchers! All you can eat burgers 24 hours, 7 days a week. You can begin to devour the burgers already inserted into the database or you can create your own burger and the database will whip it up. </p>
+			<hr>
+		</div>
+	
+		<div class='container' id='placeOrder'>
+		<h3>PLACE AN ORDER WITH CHIEF DATABASE BELOW</h3>
+			<form action="/burgers" method="POST">
+				<input type="text" id="name" name="burger_name">
+				<button type="submit" class="addBurgerButton">Place order</button>
+			</form>
+			<hr>
+		</div>
+	<main>
+		<div class='container'>
+			<div class='row'>
+				<div class='col-md-6'>
+					<h3>CHOOSE A BURGER TO DEVOUR</h3>
+					{{#each burgers}}
+          				{{#unless this.devoured}}
+          				<div>
+			              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+			                <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
+			              </form>
+			            </div>
+			        	{{/unless}}
+        			{{/each}}
+				</div>
+				<div class='col-md-6'>
+					<h3>DEVOURED</h3>
+						{{#each burgers}}
+							{{#if this.devoured}}
+								<div class='burgerEaten'>
+									<div>
+									{{this.burger_name}}
+									</div>
+								</div>
+							{{/if}}
+						{{/each}}
+				</div>
+			</div>
+		</div>
+	</main>	
+	</body>
+</html>

@@ -1,0 +1,81 @@
+body, html {
+	background-color: #EFE2BA;
+	font-family: 'Architects Daughter', cursive;
+	text-align: center;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.header {
+	font-size: 50px;
+	color: #D79922;
+}
+
+#btc {
+	color: #F13C20 !important;
+}
+
+#carouselImage {
+	    background-position: center;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    border: 15px solid #D79922;
+	    padding: 10px;
+	    margin-top: 15px;
+}
+
+.welcome {
+	font-size: 20px;
+	margin: 35px;
+}
+
+#orderSection {
+	background-color: #fff;
+	width: 100%;
+	height: auto;
+	padding: 25px;
+	border-top: 3px solid #D79922;
+	border-bottom: 3px solid #D79922;
+}
+
+.placeOrder {
+	color: #F13C20;
+}
+
+.addBurgerButton {
+	background-color: #F13C20;
+	padding: 6px;
+	color: #fff;
+	border: 3px solid #D79922;
+}
+
+#name {
+	padding: 5px;
+	border: 3px solid #D79922;
+}
+
+.burgerAvailable {
+	background-color: #F13C20;
+	margin: 5px;
+	padding: 10px;
+	color: #fff;
+	border: 3px solid #D79922;
+}
+
+.devoured {
+	border-bottom: 1px solid #F13C20;
+	padding-bottom: 10px;
+}
+
+.bottomBorder {
+	background-color: #F13C20;
+	height: 50px;
+	margin-top: 20px;
+	border-top: 3px solid #D79922;
+}
+
+.burgerEaten {
+	color: #F13C20;
+	text-decoration: line-through;
+	font-size: 20px;
+}

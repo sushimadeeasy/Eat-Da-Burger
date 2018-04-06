@@ -1,22 +1,22 @@
 {
   "name": "burgers",
   "version": "1.0.0",
-  "description": "burger application",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sushimadeeasy/Eat-Da-Burger.git"
+    "url": "git+https://github.com/CodeKhoi/Burgers.git"
   },
-  "author": "Sushant Srikrish",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sushimadeeasy/Eat-Da-Burger/issues"
+    "url": "https://github.com/CodeKhoi/Burgers/issues"
   },
-  "homepage": "https://github.com/sushimadeeasy/Eat-Da-Burger#readme",
+  "homepage": "https://github.com/CodeKhoi/Burgers#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
